@@ -120,6 +120,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:DOTWEEN
 -define:COLLECTIONS_2_0_OR_ABOVE
 -define:USE_NEW_EDITOR_ANALYTICS
 -define:ENABLE_UXML_SERIALIZED_DATA
@@ -374,6 +375,8 @@
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Transactions.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"Library/PackageCache/com.unity.collab-proxy@c854d1f7d97f/Lib/Editor/log4netPlastic.dll"
 -r:"Library/PackageCache/com.unity.collab-proxy@c854d1f7d97f/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"Library/PackageCache/com.unity.collab-proxy@c854d1f7d97f/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll"

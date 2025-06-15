@@ -123,6 +123,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
@@ -364,10 +365,12 @@
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll"
 -r:"Library/PackageCache/com.unity.ext.nunit@031a54704bff/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.nuget.mono-cecil@d6f9955a5d5f/Mono.Cecil.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@7dcdc439b230/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
@@ -419,7 +422,14 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/Battle/BattleDialogBox.cs"
+"Assets/Scripts/Battle/BattleHud.cs"
+"Assets/Scripts/Battle/BattleSystem.cs"
+"Assets/Scripts/Battle/BattleUnit.cs"
+"Assets/Scripts/Battle/HPBar.cs"
 "Assets/Scripts/Player/PlayerController.cs"
+"Assets/Scripts/Pokemons/Move.cs"
+"Assets/Scripts/Pokemons/MoveBase.cs"
 "Assets/Scripts/Pokemons/Pokemon.cs"
 "Assets/Scripts/Pokemons/PokemonBase.cs"
 -langversion:9.0

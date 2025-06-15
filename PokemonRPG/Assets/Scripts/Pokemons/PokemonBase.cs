@@ -16,13 +16,14 @@ public class PokemonBase : ScriptableObject
     [SerializeField] PokemonType type1;
     [SerializeField] PokemonType type2;
 
-    //Base Set
+    //Base Stats
     [SerializeField] int maxHP;
     [SerializeField] int attack;
     [SerializeField] int defense;
     [SerializeField] int spAttack;
     [SerializeField] int spDefense;
     [SerializeField] int speed;
+    [SerializeField] List<LearnableMove> learnableMoves;
 
     public string Name
     {
@@ -78,14 +79,35 @@ public class PokemonBase : ScriptableObject
     {
         get { return spDefense; }
     }
-    
+
     public int Speed
     {
         get { return speed; }
     }
+
+    public List<LearnableMove> LearnableMoves
+    {
+        get{ return learnableMoves; }
+    }
 }
 
+[System.Serializable]
 
+public class LearnableMove
+{
+    [SerializeField] MoveBase moveBase;
+    [SerializeField] int level;
+
+    public MoveBase Base
+    {
+        get { return moveBase; }
+    }
+
+    public int Level
+    {
+        get { return level; }
+    }
+}
 public enum PokemonType
 {
     None,
@@ -104,4 +126,31 @@ public enum PokemonType
     Rock,
     Ghost,
     Dragon
+}
+
+public class TypeChart
+{
+    static float[][] chart =
+    {
+        //                   NOT FIR WAT ELE GRA ICE FIG POI
+        /*NOR*/ new float[] {1f, 1f, 1f, 1f, 1f, 1f, 1f, 1f},
+        /*FIR*/ new float[] {1f, 0.5f, 0.5f, 1f, 2f, 2f, 1f, 1f},
+        /*WAT*/ new float[] {1f, 2f, 0.5f, 2f, 0.5f, 1f, 1f, 1f},
+        /*ELE*/ new float[] {1f, 1f, 2f, 0.5f, 0.5f, 2f, 1f, 1f},
+        /*GRS*/ new float[] {1f, 0.5f, 2f, 2f, 0.5f, 1f, 1f, 0.5f},
+        /*POI*/ new float[] {1f, 1f, 1f, 1f, 2f, 1f, 1f, 1f},
+    };
+
+    public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
+    {
+        if (attackType == PokemonType.None || defenseType == PokemonType.None)
+            return 1;
+
+        int row = (int)attackType - 1;
+        int col = (int)defenseType - 1;
+
+        return chart[row][col];
+        
+    }
+    
 }
