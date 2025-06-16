@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BattleHud : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class BattleHud : MonoBehaviour
 
     public IEnumerator UpdateHP()
     {
+        if (_pokemon.HpChanged)
+        {
+            yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHP);
+            _pokemon.HpChanged = false;
+        }
         yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHP);
+
     }
 }
