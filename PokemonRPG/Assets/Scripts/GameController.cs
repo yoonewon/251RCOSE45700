@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum GameState { FreeRoam, Battle }
 public class GameController : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
 
     GameState state;
+
+    private void Awake()
+    {
+        ConditionsDB.Init();
+    }
 
     private void Start()
     {
